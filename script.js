@@ -22,7 +22,7 @@ generateEl.addEventListener('click',()=>{
     const hasUpper = uppercaseEl.checked;
     const hasNum   = numbersEl.checked;
     const hasSym   = symbolsEl.checked;
-
+    resultEl.innerText = genPassword(hasLower,hasUpper,hasNum,hasSym,length);
 
 })
 // Generate password function
@@ -33,7 +33,19 @@ function genPassword(lower, upper, number, symbol, length)
     const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(
         item => Object.values(item)[0]
     );
-    
+    if(typesCount === 0)
+    {
+        return '';
+    }
+    for(var i=0;i<length;i+=typesCount)
+    {
+        typesArr.forEach(type=>{
+            const functionName = Object.keys(type)[0];
+            generatedPass += randomFunction[functionName]();
+        });
+    }
+    const finalPassword = generatedPass.slice(0, length);
+    return finalPassword;
 }
 // Generator Functions
 function getLowerPass()

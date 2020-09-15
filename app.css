@@ -9,7 +9,7 @@
 
 body 
 {
-	background-color: #3B3B98;
+	background-color: #080E33;
 	color: #fff;
 	display: flex;
 	flex-direction: column;
@@ -34,13 +34,17 @@ input[type=checkbox] {
 
 .container 
 {
-	background-color: #23235B;
+	background-color: #192DA1;
 	box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
 	padding: 20px;
-	width: 350px;
+	width: 500px;
 	max-width: 100%;
 }
-
+.metadata
+{
+	display: flex;
+	flex-direction: column;
+}
 .result-container 
 {
 	background-color: rgba(0, 0, 0, 0.4);
@@ -78,7 +82,7 @@ input[type=checkbox] {
 	cursor: pointer;
 	font-size: 16px;
 	padding: 8px 12px;
-	background-color: #3B3B98;
+	background-color: #0C154A;
 }
 
 .btn-large 
@@ -93,4 +97,6 @@ input[type=checkbox] {
 	justify-content: space-between;
 	align-items: center;
 	margin: 15px 0;
+	padding: 8px;
+	border-radius: 10px;
 }
